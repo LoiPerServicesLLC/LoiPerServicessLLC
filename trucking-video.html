@@ -5,11 +5,11 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Loi Per Services LLC | Trucking Services</title>
+  <title>Loi Per Services LLC | Trucking & Freight Transportation</title>
 
   <meta
     name="description"
-    content="Loi Per Services LLC provides reliable business-to-business trucking and freight transportation services."
+    content="Loi Per Services LLC provides reliable business-to-business trucking and freight transportation services with a commitment to safe, timely and professional delivery."
   >
 
   <meta name="robots" content="index, follow">
@@ -20,6 +20,18 @@
   >
 
   <style>
+    :root {
+      --gold: #f5b400;
+      --gold-light: #ffc72c;
+      --black: #070a0d;
+      --dark: #0b1015;
+      --dark-2: #111820;
+      --dark-3: #18212a;
+      --border: #29343e;
+      --text: #ffffff;
+      --muted: #aeb8c1;
+    }
+
     * {
       box-sizing: border-box;
       margin: 0;
@@ -31,333 +43,776 @@
     }
 
     body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: #080c11;
-      color: #ffffff;
+      font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+      background: var(--black);
+      color: var(--text);
+
       line-height: 1.6;
+
+      overflow-x: hidden;
     }
 
-    /* HEADER */
+    a {
+      color: inherit;
+    }
+
+    /* =========================
+       HEADER
+    ========================= */
+
     header {
-      background: #111820;
-      border-bottom: 1px solid #29323c;
-      padding: 22px 5%;
+      position: relative;
+      z-index: 20;
+
+      background: rgba(7, 10, 13, 0.96);
+
+      border-bottom: 1px solid var(--border);
+
+      backdrop-filter: blur(12px);
     }
 
     .header-inner {
-      max-width: 1200px;
-      margin: 0 auto;
+      width: min(1180px, 92%);
+
+      min-height: 76px;
+
+      margin: auto;
 
       display: flex;
+
       align-items: center;
+
       justify-content: space-between;
-      gap: 20px;
+
+      gap: 30px;
     }
 
-    .logo-text {
-      font-size: 25px;
-      font-weight: 800;
-      letter-spacing: 0.5px;
-    }
-
-    .logo-text span {
-      color: #f5b400;
-    }
-
-    .back-button {
-      display: inline-block;
-      padding: 12px 20px;
-
-      color: #ffffff;
+    .brand {
       text-decoration: none;
 
-      border: 1px solid #59636d;
-      border-radius: 6px;
+      font-size: 24px;
 
-      font-weight: 600;
+      font-weight: 900;
 
-      transition: 0.25s ease;
+      letter-spacing: -0.5px;
     }
 
-    .back-button:hover {
-      background: #f5b400;
-      color: #080c11;
-      border-color: #f5b400;
+    .brand span {
+      color: var(--gold);
     }
 
-    /* HERO */
-    .hero {
-      position: relative;
-      min-height: 440px;
+    .nav-button {
+      display: inline-flex;
 
-      display: flex;
       align-items: center;
+
       justify-content: center;
 
-      text-align: center;
+      min-height: 44px;
 
-      padding: 80px 20px;
+      padding: 0 20px;
+
+      border: 1px solid #4b5660;
+
+      border-radius: 6px;
+
+      text-decoration: none;
+
+      font-size: 14px;
+
+      font-weight: 700;
+
+      transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+    }
+
+    .nav-button:hover {
+      background: var(--gold);
+
+      color: #080b0e;
+
+      border-color: var(--gold);
+
+      transform: translateY(-1px);
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      position: relative;
+
+      min-height: 500px;
+
+      display: flex;
+
+      align-items: center;
 
       overflow: hidden;
 
       background:
-        linear-gradient(
-          rgba(0, 0, 0, 0.72),
-          rgba(0, 0, 0, 0.82)
+        radial-gradient(
+          circle at 75% 45%,
+          rgba(245, 180, 0, 0.12),
+          transparent 32%
         ),
-        #05080c;
+        linear-gradient(
+          135deg,
+          #070a0d 0%,
+          #0c1218 55%,
+          #111a22 100%
+        );
+    }
+
+    .hero::after {
+      content: "";
+
+      position: absolute;
+
+      inset: 0;
+
+      background:
+        linear-gradient(
+          90deg,
+          rgba(7, 10, 13, 1) 0%,
+          rgba(7, 10, 13, 0.88) 42%,
+          rgba(7, 10, 13, 0.35) 100%
+        );
+
+      pointer-events: none;
     }
 
     .hero-content {
       position: relative;
+
       z-index: 2;
 
-      max-width: 1000px;
-      margin: 0 auto;
+      width: min(1180px, 92%);
+
+      margin: auto;
+
+      padding: 80px 0;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 10px;
+
+      margin-bottom: 20px;
+
+      color: var(--gold);
+
+      font-size: 13px;
+
+      font-weight: 800;
+
+      letter-spacing: 2px;
+
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+
+      width: 36px;
+
+      height: 3px;
+
+      background: var(--gold);
     }
 
     .hero h1 {
-      font-size: clamp(42px, 7vw, 78px);
-      line-height: 1.05;
+      max-width: 820px;
+
+      font-size: clamp(44px, 7vw, 82px);
+
+      line-height: 0.98;
+
+      letter-spacing: -3px;
+
       font-weight: 900;
-      letter-spacing: -2px;
+
+      margin-bottom: 25px;
+    }
+
+    .hero h1 span {
+      color: var(--gold);
+    }
+
+    .hero-text {
+      max-width: 700px;
+
+      color: #d8dee3;
+
+      font-size: clamp(17px, 2vw, 21px);
+
+      line-height: 1.65;
+
+      margin-bottom: 32px;
+    }
+
+    .hero-actions {
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 14px;
+    }
+
+    .primary-button,
+    .secondary-button {
+      display: inline-flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      min-height: 50px;
+
+      padding: 0 26px;
+
+      border-radius: 6px;
+
+      text-decoration: none;
+
+      font-weight: 800;
+
+      transition: 0.2s ease;
+    }
+
+    .primary-button {
+      background: var(--gold);
+
+      color: #080b0e;
+    }
+
+    .primary-button:hover {
+      background: var(--gold-light);
+
+      transform: translateY(-2px);
+    }
+
+    .secondary-button {
+      border: 1px solid #59646e;
+
+      color: white;
+    }
+
+    .secondary-button:hover {
+      background: white;
+
+      color: #080b0e;
+
+      border-color: white;
+    }
+
+    /* =========================
+       VIDEO AREA
+    ========================= */
+
+    .video-section {
+      position: relative;
+
+      padding: 85px 0;
+
+      background: var(--dark);
+    }
+
+    .section-container {
+      width: min(1180px, 92%);
+
+      margin: auto;
+    }
+
+    .section-heading {
+      text-align: center;
+
+      margin-bottom: 42px;
+    }
+
+    .section-label {
+      color: var(--gold);
+
+      font-size: 12px;
+
+      font-weight: 900;
+
+      letter-spacing: 2px;
+
+      text-transform: uppercase;
 
       margin-bottom: 10px;
     }
 
-    .hero h1 span {
-      display: block;
-      color: #f5b400;
+    .section-heading h2 {
+      font-size: clamp(30px, 4vw, 46px);
+
+      line-height: 1.1;
+
+      margin-bottom: 12px;
     }
 
-    .hero p {
-      max-width: 760px;
-      margin: 25px auto 0;
+    .section-heading p {
+      max-width: 650px;
 
-      color: #e1e5e9;
-      font-size: clamp(17px, 2vw, 21px);
+      margin: auto;
+
+      color: var(--muted);
+
+      font-size: 16px;
     }
 
-    /* VIDEO SECTION */
-    .video-section {
-      padding: 70px 20px 90px;
+    .video-wrapper {
+      display: grid;
 
-      background: #0b1016;
+      grid-template-columns:
+        minmax(0, 1.5fr)
+        minmax(280px, 0.75fr);
+
+      gap: 30px;
+
+      align-items: stretch;
     }
 
-    .video-container {
-      width: 100%;
-      max-width: 1100px;
+    .video-card {
+      background: #000;
 
-      margin: 0 auto;
+      border: 1px solid var(--border);
 
-      background: #000000;
-
-      border: 1px solid #303942;
-      border-radius: 14px;
+      border-radius: 12px;
 
       overflow: hidden;
 
       box-shadow:
-        0 25px 70px rgba(0, 0, 0, 0.55);
+        0 25px 70px rgba(0, 0, 0, 0.45);
+    }
+
+    .video-frame {
+      width: 100%;
+
+      display: flex;
+
+      justify-content: center;
+
+      align-items: center;
+
+      background: #000;
+
+      min-height: 580px;
     }
 
     video {
       display: block;
 
       width: 100%;
-      height: auto;
 
-      min-height: 300px;
+      max-height: 700px;
 
-      background: #000000;
+      background: #000;
 
       object-fit: contain;
     }
 
-    .video-message {
-      padding: 18px 20px;
-
-      text-align: center;
+    .video-caption {
+      padding: 18px 22px;
 
       background: #111820;
 
-      color: #cbd2d8;
+      border-top: 1px solid var(--border);
+
+      color: var(--muted);
 
       font-size: 14px;
     }
 
-    /* INFORMATION */
-    .info-section {
-      max-width: 1100px;
+    /* =========================
+       SIDE PANEL
+    ========================= */
 
-      margin: 0 auto;
+    .video-info {
+      display: flex;
 
-      padding: 0 20px 90px;
+      flex-direction: column;
+
+      justify-content: center;
+
+      padding: 38px;
+
+      border: 1px solid var(--border);
+
+      border-radius: 12px;
+
+      background:
+        linear-gradient(
+          145deg,
+          #141c24,
+          #0d1217
+        );
     }
 
-    .info-grid {
+    .video-info h3 {
+      font-size: 30px;
+
+      line-height: 1.15;
+
+      margin-bottom: 18px;
+    }
+
+    .video-info h3 span {
+      color: var(--gold);
+    }
+
+    .video-info > p {
+      color: var(--muted);
+
+      margin-bottom: 28px;
+    }
+
+    .check-list {
+      list-style: none;
+
+      display: grid;
+
+      gap: 17px;
+
+      margin-bottom: 30px;
+    }
+
+    .check-list li {
+      display: flex;
+
+      gap: 12px;
+
+      align-items: flex-start;
+
+      color: #e1e6ea;
+
+      font-size: 15px;
+    }
+
+    .check-list li::before {
+      content: "✓";
+
+      flex: 0 0 23px;
+
+      width: 23px;
+
+      height: 23px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      border-radius: 50%;
+
+      background: var(--gold);
+
+      color: #080b0e;
+
+      font-size: 13px;
+
+      font-weight: 900;
+    }
+
+    /* =========================
+       SERVICES
+    ========================= */
+
+    .services {
+      padding: 90px 0;
+
+      background: var(--black);
+
+      border-top: 1px solid var(--border);
+    }
+
+    .service-grid {
       display: grid;
 
       grid-template-columns:
         repeat(3, 1fr);
 
-      gap: 24px;
+      gap: 22px;
     }
 
-    .info-card {
-      background: #111820;
+    .service-card {
+      position: relative;
 
-      border: 1px solid #29323c;
+      padding: 34px 28px;
+
+      background: var(--dark-2);
+
+      border: 1px solid var(--border);
+
       border-radius: 10px;
 
-      padding: 30px 25px;
+      overflow: hidden;
 
-      text-align: center;
+      transition:
+        transform 0.25s ease,
+        border-color 0.25s ease;
     }
 
-    .info-card .icon {
-      font-size: 34px;
+    .service-card::before {
+      content: "";
 
-      margin-bottom: 15px;
+      position: absolute;
+
+      left: 0;
+
+      top: 0;
+
+      width: 100%;
+
+      height: 3px;
+
+      background: var(--gold);
     }
 
-    .info-card h2 {
-      color: #f5b400;
+    .service-card:hover {
+      transform: translateY(-5px);
 
+      border-color: #52606c;
+    }
+
+    .service-icon {
+      font-size: 32px;
+
+      margin-bottom: 20px;
+    }
+
+    .service-card h3 {
       font-size: 21px;
 
       margin-bottom: 10px;
     }
 
-    .info-card p {
-      color: #cbd2d8;
+    .service-card p {
+      color: var(--muted);
 
       font-size: 15px;
     }
 
-    /* CALL TO ACTION */
+    /* =========================
+       CTA
+    ========================= */
+
     .cta {
+      position: relative;
+
+      padding: 95px 20px;
+
+      text-align: center;
+
       background:
         linear-gradient(
           135deg,
-          #121a22,
-          #090d12
+          #121b23,
+          #080c10
         );
 
-      border-top: 1px solid #29323c;
-      border-bottom: 1px solid #29323c;
+      border-top: 1px solid var(--border);
+    }
 
-      text-align: center;
+    .cta-inner {
+      width: min(800px, 100%);
 
-      padding: 70px 20px;
+      margin: auto;
     }
 
     .cta h2 {
-      font-size: clamp(30px, 5vw, 48px);
+      font-size: clamp(32px, 5vw, 54px);
 
-      margin-bottom: 15px;
+      line-height: 1.05;
+
+      margin-bottom: 18px;
+    }
+
+    .cta h2 span {
+      color: var(--gold);
     }
 
     .cta p {
-      color: #cbd2d8;
+      color: var(--muted);
 
-      max-width: 650px;
+      font-size: 17px;
 
-      margin: 0 auto 28px;
+      margin-bottom: 30px;
     }
 
-    .cta-button {
-      display: inline-block;
+    /* =========================
+       FOOTER
+    ========================= */
 
-      background: #f5b400;
-      color: #080c11;
-
-      text-decoration: none;
-
-      font-weight: 800;
-
-      padding: 14px 28px;
-
-      border-radius: 6px;
-
-      transition: 0.25s ease;
-    }
-
-    .cta-button:hover {
-      background: #ffffff;
-
-      transform: translateY(-2px);
-    }
-
-    /* FOOTER */
     footer {
-      text-align: center;
-
       padding: 30px 20px;
 
-      background: #070a0e;
+      text-align: center;
 
-      color: #8f99a3;
+      background: #050709;
+
+      color: #7f8992;
 
       font-size: 14px;
+
+      border-top: 1px solid #171e25;
     }
 
     footer strong {
-      color: #f5b400;
+      color: var(--gold);
     }
 
-    /* MOBILE */
-    @media (max-width: 800px) {
+    /* =========================
+       TABLET
+    ========================= */
 
-      .header-inner {
-        flex-direction: column;
-      }
-
-      .logo-text {
-        text-align: center;
-      }
+    @media (max-width: 900px) {
 
       .hero {
-        min-height: 380px;
-
-        padding: 60px 20px;
+        min-height: 450px;
       }
 
-      .info-grid {
+      .video-wrapper {
         grid-template-columns: 1fr;
       }
 
-      video {
-        min-height: 220px;
+      .video-info {
+        padding: 30px;
+      }
+
+      .service-grid {
+        grid-template-columns: 1fr;
       }
     }
 
-    @media (max-width: 500px) {
+    /* =========================
+       MOBILE
+    ========================= */
 
-      header {
-        padding: 18px 15px;
+    @media (max-width: 600px) {
+
+      .header-inner {
+        min-height: 68px;
+
+        width: min(94%, 1180px);
       }
 
-      .logo-text {
-        font-size: 21px;
+      .brand {
+        font-size: 18px;
+      }
+
+      .nav-button {
+        min-height: 38px;
+
+        padding: 0 12px;
+
+        font-size: 12px;
+      }
+
+      .hero {
+        min-height: auto;
+      }
+
+      .hero-content {
+        padding: 65px 0 75px;
+      }
+
+      .eyebrow {
+        font-size: 10px;
+
+        letter-spacing: 1.5px;
       }
 
       .hero h1 {
-        letter-spacing: -1px;
+        font-size: clamp(42px, 13vw, 60px);
+
+        letter-spacing: -2px;
+      }
+
+      .hero-text {
+        font-size: 16px;
+
+        line-height: 1.55;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+
+        width: 100%;
+      }
+
+      .primary-button,
+      .secondary-button {
+        width: 100%;
       }
 
       .video-section {
-        padding: 40px 12px 60px;
+        padding: 65px 0;
       }
 
-      .video-container {
+      .section-container {
+        width: 94%;
+      }
+
+      .section-heading {
+        margin-bottom: 30px;
+      }
+
+      .video-card {
         border-radius: 8px;
       }
 
-      .info-section {
-        padding-left: 12px;
-        padding-right: 12px;
+      .video-frame {
+        min-height: 0;
+
+        padding: 0;
+
+        background: #000;
+      }
+
+      video {
+        width: 100%;
+
+        max-height: none;
+
+        height: auto;
+      }
+
+      .video-info {
+        padding: 28px 22px;
+      }
+
+      .video-info h3 {
+        font-size: 27px;
+      }
+
+      .services {
+        padding: 65px 0;
+      }
+
+      .service-card {
+        padding: 28px 22px;
+      }
+
+      .cta {
+        padding: 70px 20px;
+      }
+
+      .cta p {
+        font-size: 16px;
       }
     }
   </style>
@@ -365,156 +820,327 @@
 
 <body>
 
-  <!-- HEADER -->
+  <!-- =========================
+       HEADER
+  ========================= -->
+
   <header>
+
     <div class="header-inner">
 
-      <div class="logo-text">
+      <a
+        class="brand"
+        href="https://loiperservicesllc.github.io/LoiPerServicessLLC/"
+      >
         Loi Per <span>Services LLC</span>
-      </div>
+      </a>
 
       <a
-        class="back-button"
+        class="nav-button"
         href="https://loiperservicesllc.github.io/LoiPerServicessLLC/"
       >
         ← Back to Website
       </a>
 
     </div>
+
   </header>
 
 
-  <!-- HERO -->
-  <section class="hero">
+  <!-- =========================
+       HERO
+  ========================= -->
 
-    <div class="hero-content">
+  <main>
 
-      <h1>
-        Loi Per Services LLC
-        <span>Trucking Services</span>
-      </h1>
+    <section class="hero">
 
-      <p>
-        Reliable business-to-business trucking and freight
-        transportation services built around safe, timely,
-        and professional delivery.
-      </p>
+      <div class="hero-content">
 
-    </div>
+        <div class="eyebrow">
+          Trucking & Freight Transportation
+        </div>
 
-  </section>
+        <h1>
+          Moving Business
+          <span>Forward.</span>
+        </h1>
 
-
-  <!-- VIDEO -->
-  <section class="video-section">
-
-    <div class="video-container">
-
-      <video
-        controls
-        preload="metadata"
-        playsinline
-        poster=""
-      >
-
-        <source
-          src="trucking-video.mp4"
-          type="video/mp4"
-        >
-
-        Your browser does not support HTML5 video.
-
-      </video>
-
-      <div class="video-message">
-        Watch our trucking services video to learn more about
-        Loi Per Services LLC.
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- SERVICES -->
-  <section class="info-section">
-
-    <div class="info-grid">
-
-      <div class="info-card">
-
-        <div class="icon">🚛</div>
-
-        <h2>Reliable Transportation</h2>
-
-        <p>
-          Dependable trucking and freight transportation
-          services for business customers.
+        <p class="hero-text">
+          Loi Per Services LLC provides dependable
+          business-to-business trucking and freight
+          transportation services with a commitment to
+          safe, timely, and professional delivery.
         </p>
 
-      </div>
+        <div class="hero-actions">
 
+          <a
+            class="primary-button"
+            href="#video"
+          >
+            Watch Our Video
+          </a>
 
-      <div class="info-card">
+          <a
+            class="secondary-button"
+            href="mailto:loiperservices.ca@gmail.com"
+          >
+            Contact Us
+          </a>
 
-        <div class="icon">⏱️</div>
-
-        <h2>Timely Delivery</h2>
-
-        <p>
-          We understand the importance of getting your
-          freight where it needs to go on time.
-        </p>
-
-      </div>
-
-
-      <div class="info-card">
-
-        <div class="icon">🤝</div>
-
-        <h2>Professional Service</h2>
-
-        <p>
-          We are committed to safe, professional service
-          and strong customer relationships.
-        </p>
+        </div>
 
       </div>
 
-    </div>
-
-  </section>
+    </section>
 
 
-  <!-- CTA -->
-  <section class="cta">
+    <!-- =========================
+         VIDEO
+    ========================= -->
 
-    <h2>Need Reliable Trucking Services?</h2>
-
-    <p>
-      Contact Loi Per Services LLC to discuss your
-      transportation and freight needs.
-    </p>
-
-    <a
-      class="cta-button"
-      href="mailto:loiperservices.ca@gmail.com"
+    <section
+      class="video-section"
+      id="video"
     >
-      Contact Loi Per Services LLC
-    </a>
 
-  </section>
+      <div class="section-container">
+
+        <div class="section-heading">
+
+          <div class="section-label">
+            See Us In Motion
+          </div>
+
+          <h2>
+            Reliable Transportation.
+          </h2>
+
+          <p>
+            Take a look at Loi Per Services LLC
+            and learn more about the transportation
+            services we provide.
+          </p>
+
+        </div>
 
 
-  <!-- FOOTER -->
+        <div class="video-wrapper">
+
+          <div class="video-card">
+
+            <div class="video-frame">
+
+              <video
+                controls
+                playsinline
+                preload="metadata"
+              >
+
+                <source
+                  src="trucking-video.mp4"
+                  type="video/mp4"
+                >
+
+                Your browser does not support HTML5 video.
+
+              </video>
+
+            </div>
+
+            <div class="video-caption">
+              Loi Per Services LLC — Trucking Services
+            </div>
+
+          </div>
+
+
+          <div class="video-info">
+
+            <h3>
+              Built for
+              <span>Business.</span>
+            </h3>
+
+            <p>
+              We understand that transportation is
+              an important part of keeping your business
+              moving. Our focus is dependable service,
+              communication, and professional delivery.
+            </p>
+
+            <ul class="check-list">
+
+              <li>
+                Reliable freight transportation
+              </li>
+
+              <li>
+                Safe and professional service
+              </li>
+
+              <li>
+                Timely business-to-business delivery
+              </li>
+
+              <li>
+                Customer-focused transportation solutions
+              </li>
+
+            </ul>
+
+            <a
+              class="primary-button"
+              href="mailto:loiperservices.ca@gmail.com"
+            >
+              Get in Touch
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         SERVICES
+    ========================= -->
+
+    <section class="services">
+
+      <div class="section-container">
+
+        <div class="section-heading">
+
+          <div class="section-label">
+            Our Commitment
+          </div>
+
+          <h2>
+            Transportation You Can Count On
+          </h2>
+
+          <p>
+            Professional service focused on helping
+            businesses move their goods efficiently.
+          </p>
+
+        </div>
+
+
+        <div class="service-grid">
+
+          <article class="service-card">
+
+            <div class="service-icon">
+              🚛
+            </div>
+
+            <h3>
+              Reliable Transportation
+            </h3>
+
+            <p>
+              Dependable trucking and freight
+              transportation services designed
+              around the needs of business customers.
+            </p>
+
+          </article>
+
+
+          <article class="service-card">
+
+            <div class="service-icon">
+              ⏱️
+            </div>
+
+            <h3>
+              Timely Delivery
+            </h3>
+
+            <p>
+              We recognize the importance of getting
+              freight where it needs to go safely
+              and on schedule.
+            </p>
+
+          </article>
+
+
+          <article class="service-card">
+
+            <div class="service-icon">
+              🤝
+            </div>
+
+            <h3>
+              Professional Service
+            </h3>
+
+            <p>
+              We are committed to strong customer
+              relationships and a professional
+              transportation experience.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         CTA
+    ========================= -->
+
+    <section class="cta">
+
+      <div class="cta-inner">
+
+        <h2>
+          Let's Keep Your
+          <span>Business Moving.</span>
+        </h2>
+
+        <p>
+          Looking for dependable trucking and freight
+          transportation services? Contact Loi Per
+          Services LLC to discuss your transportation needs.
+        </p>
+
+        <a
+          class="primary-button"
+          href="mailto:loiperservices.ca@gmail.com"
+        >
+          Contact Loi Per Services LLC
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
   <footer>
 
-    © 2026 <strong>Loi Per Services LLC</strong>.
+    © 2026
+    <strong>Loi Per Services LLC</strong>.
     All rights reserved.
 
   </footer>
-
 
 </body>
 </html>
