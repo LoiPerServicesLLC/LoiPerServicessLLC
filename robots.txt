@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://loiperservicesllc.github.io/LoiPerServicessLLC/sitemap.xml
