@@ -15,7 +15,7 @@ header{position:sticky;top:0;z-index:10;background:#0b0f14;color:#fff}
 .logo{display:flex;align-items:center;gap:12px;font-weight:800}.logo img{width:52px;height:52px;object-fit:contain;background:#fff;border-radius:50%}
 nav ul{display:flex;gap:24px;list-style:none;font-size:14px;font-weight:700}nav a:hover{color:var(--red)}
 .quote{background:var(--red);padding:11px 16px;border-radius:4px}.quote:hover{color:#fff!important;background:#b51218}
-.hero{min-height:650px;display:flex;align-items:center;color:#fff;background:linear-gradient(90deg,rgba(0,0,0,.9),rgba(0,0,0,.55)),url("images/truck.jpg") center/cover,#20252b}
+.hero{position:relative;min-height:650px;display:flex;align-items:center;color:#fff;overflow:hidden;background:#0b0f14} .hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0} .hero-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.82),rgba(0,0,0,.42));z-index:1} .hero-content{position:relative;z-index:2;max-width:720px;padding:90px 0}
 .hero-content{max-width:720px;padding:90px 0}.tag{display:inline-block;background:var(--red);padding:7px 12px;font-size:12px;font-weight:800;letter-spacing:1px;text-transform:uppercase;margin-bottom:20px}
 h1{font-size:clamp(42px,7vw,76px);line-height:1.02;text-transform:uppercase;letter-spacing:-2px;margin-bottom:20px}h1 span{color:var(--red)}
 .hero p{font-size:20px;color:#e6e8ea;max-width:650px;margin-bottom:30px}.btn{display:inline-block;padding:14px 22px;font-weight:800;font-size:13px;text-transform:uppercase;border-radius:4px}.red{background:var(--red);color:#fff}.outline{border:2px solid #fff;color:#fff;margin-left:8px}
@@ -41,7 +41,7 @@ footer{background:#070a0d;color:#b8bec5;padding:32px 0}.foot{display:flex;justif
 </div></header>
 
 <main id="home">
-<section class="hero"><div class="wrap hero-content">
+<section class="hero"> <video class="hero-video" autoplay muted loop playsinline> <source src="trucking-video.mp4" type="video/mp4"> </video> <div class="hero-overlay"></div> <div class="wrap hero-content">
 <div class="tag">Canadian Trucking & Freight</div>
 <h1>Moving Your Freight.<br><span>Moving Your Business.</span></h1>
 <p>Reliable trucking and freight transportation solutions built around safety, dependable service and timely delivery.</p>
