@@ -1,16 +1,18 @@
 <!doctype html>
+
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<meta name="description" content="Loi Per Services LLC - Professional trucking and freight transportation services across Canada.">
+<meta name="description" content="Loi Per Services LLC - Professional trucking dispatch services helping carriers find opportunities, stay organized, and keep their trucks moving.">
 
-<title>Loi Per Services LLC | Trucking & Freight</title>
+<title>Loi Per Services LLC | Truck Dispatch Services</title>
 
 <style>
 :root{
   --red:#d71920;
+  --red-dark:#b51218;
   --dark:#080b0f;
   --dark2:#11161c;
   --gray:#68727d;
@@ -62,7 +64,7 @@ header{
   color:#fff;
   background:linear-gradient(
     to bottom,
-    rgba(0,0,0,.75),
+    rgba(0,0,0,.82),
     rgba(0,0,0,0)
   );
 }
@@ -85,8 +87,8 @@ header{
 }
 
 .logo img{
-  width:48px;
-  height:48px;
+  width:50px;
+  height:50px;
   object-fit:contain;
   background:#fff;
   border-radius:50%;
@@ -95,7 +97,7 @@ header{
 nav ul{
   display:flex;
   align-items:center;
-  gap:30px;
+  gap:28px;
   list-style:none;
   font-size:13px;
   font-weight:800;
@@ -117,7 +119,7 @@ nav a:hover{
 }
 
 .nav-quote:hover{
-  background:#b51218;
+  background:var(--red-dark);
   color:#fff;
 }
 
@@ -151,17 +153,17 @@ nav a:hover{
   background:
     linear-gradient(
       90deg,
-      rgba(0,0,0,.88) 0%,
-      rgba(0,0,0,.67) 45%,
-      rgba(0,0,0,.25) 100%
+      rgba(0,0,0,.9) 0%,
+      rgba(0,0,0,.72) 42%,
+      rgba(0,0,0,.28) 100%
     );
 }
 
 .hero-content{
   position:relative;
   z-index:2;
-  max-width:760px;
-  padding-top:100px;
+  max-width:790px;
+  padding-top:95px;
 }
 
 .tag{
@@ -208,7 +210,7 @@ h1 span{
   font-size:13px;
   font-weight:900;
   text-transform:uppercase;
-  letter-spacing:.4px;
+  letter-spacing:.5px;
   transition:.2s;
 }
 
@@ -218,7 +220,8 @@ h1 span{
 }
 
 .btn-red:hover{
-  background:#b51218;
+  background:var(--red-dark);
+  transform:translateY(-2px);
 }
 
 .btn-outline{
@@ -300,6 +303,10 @@ h2{
    ABOUT
 ========================= */
 
+.about{
+  background:#fff;
+}
+
 .about-grid{
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -307,20 +314,23 @@ h2{
   align-items:center;
 }
 
-.about-image{
+.about-visual{
   min-height:500px;
   position:relative;
   overflow:hidden;
   border-radius:4px;
-  background:
-    linear-gradient(
-      rgba(0,0,0,.12),
-      rgba(0,0,0,.12)
-    ),
-    url("images/truck.jpg") center/cover;
+  background:#0b0f14;
 }
 
-.about-image::after{
+.about-visual video{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.about-visual::after{
   content:"";
   position:absolute;
   width:90px;
@@ -328,7 +338,7 @@ h2{
   right:0;
   bottom:0;
   background:var(--red);
-  z-index:1;
+  opacity:.9;
 }
 
 .about-text p{
@@ -411,6 +421,10 @@ h2{
    WHY US
 ========================= */
 
+.why{
+  background:#fff;
+}
+
 .why-grid{
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -445,7 +459,7 @@ h2{
 }
 
 /* =========================
-   VIDEO / CTA
+   CTA
 ========================= */
 
 .cta{
@@ -456,16 +470,21 @@ h2{
   background:var(--dark);
 }
 
-.cta::before{
-  content:"";
+.cta-video{
   position:absolute;
   inset:0;
-  background:
-    linear-gradient(
-      rgba(8,11,15,.88),
-      rgba(8,11,15,.88)
-    ),
-    url("images/truck.jpg") center/cover;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  z-index:0;
+  opacity:.35;
+}
+
+.cta-overlay{
+  position:absolute;
+  inset:0;
+  background:rgba(8,11,15,.82);
+  z-index:1;
 }
 
 .cta-content{
@@ -514,6 +533,10 @@ h2{
 .detail span,
 .detail a{
   font-weight:700;
+}
+
+.detail a:hover{
+  color:var(--red);
 }
 
 form{
@@ -590,7 +613,7 @@ footer{
 @media(max-width:800px){
 
   header{
-    background:rgba(8,11,15,.9);
+    background:rgba(8,11,15,.92);
   }
 
   .nav{
@@ -639,7 +662,7 @@ footer{
     padding:75px 0;
   }
 
-  .about-image{
+  .about-visual{
     min-height:350px;
   }
 
@@ -657,6 +680,7 @@ footer{
   }
 }
 </style>
+
 </head>
 
 <body>
@@ -668,27 +692,28 @@ footer{
 <header>
   <div class="wrap nav">
 
-    <a class="logo" href="#home">
-      <img src="logo.png" alt="Loi Per Services LLC logo">
-      <span>LOI PER SERVICES LLC</span>
-    </a>
+```
+<a class="logo" href="#home">
+  <img src="logo.png" alt="Loi Per Services LLC logo">
+  <span>LOI PER SERVICES LLC</span>
+</a>
 
-    <nav>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#why">Why Us</a></li>
-        <li>
-          <a class="nav-quote" href="#contact">
-            Request a Quote
-          </a>
-        </li>
-      </ul>
-    </nav>
+<nav>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#why">Why Us</a></li>
+    <li>
+      <a class="nav-quote" href="#contact">
+        Get Started
+      </a>
+    </li>
+  </ul>
+</nav>
+```
 
   </div>
 </header>
-
 
 <!-- =========================
      HERO
@@ -698,15 +723,17 @@ footer{
 
 <section class="hero">
 
-  <video
-    class="hero-video"
-    autoplay
-    muted
-    loop
-    playsinline
-    preload="auto">
+<video
+ class="hero-video"
+ autoplay
+ muted
+ loop
+ playsinline
+ preload="auto">
 
-    <source src="trucking-video.mp4" type="video/mp4">
+```
+<source src="trucking-video.mp4" type="video/mp4">
+```
 
   </video>
 
@@ -714,38 +741,39 @@ footer{
 
   <div class="wrap hero-content">
 
-    <div class="tag">
-      Canadian Trucking & Freight
-    </div>
+```
+<div class="tag">
+  Professional Truck Dispatch Services
+</div>
 
-    <h1>
-      Moving Your Freight.
-      <br>
-      <span>Moving Your Business.</span>
-    </h1>
+<h1>
+  Reliable Dispatch.
+  <br>
+  <span>Stronger Miles.</span>
+</h1>
 
-    <p>
-      Reliable trucking and freight transportation
-      solutions built around safety, dependable
-      service and timely delivery.
-    </p>
+<p>
+  We help trucking carriers stay focused on the road
+  while we handle the dispatch side of the business
+  with professionalism, communication and consistency.
+</p>
 
-    <div class="buttons">
+<div class="buttons">
 
-      <a class="btn btn-red" href="#contact">
-        Request a Quote
-      </a>
+  <a class="btn btn-red" href="#contact">
+    Get Started
+  </a>
 
-      <a class="btn btn-outline" href="#services">
-        Explore Services
-      </a>
+  <a class="btn btn-outline" href="#services">
+    Our Services
+  </a>
 
-    </div>
+</div>
+```
 
   </div>
 
 </section>
-
 
 <!-- =========================
      TRUST BAR
@@ -755,75 +783,95 @@ footer{
 
   <div class="wrap trust-grid">
 
-    <div class="trust-item">
-      <strong>Reliable Transportation</strong>
-      <span>Dependable freight service</span>
-    </div>
+```
+<div class="trust-item">
+  <strong>Reliable Dispatch</strong>
+  <span>Professional support for your operation</span>
+</div>
 
-    <div class="trust-item">
-      <strong>Safety First</strong>
-      <span>Professional transportation</span>
-    </div>
+<div class="trust-item">
+  <strong>Carrier Focused</strong>
+  <span>Built around your business needs</span>
+</div>
 
-    <div class="trust-item">
-      <strong>Customer Focused</strong>
-      <span>Built around your needs</span>
-    </div>
+<div class="trust-item">
+  <strong>Clear Communication</strong>
+  <span>Keeping you informed and organized</span>
+</div>
+```
 
   </div>
 
 </div>
 
-
 <!-- =========================
      ABOUT
 ========================= -->
 
-<section id="about">
+<section id="about" class="about">
 
   <div class="wrap about-grid">
 
-    <div class="about-image"></div>
+```
+<div class="about-visual">
 
-    <div class="about-text">
+  <video
+    autoplay
+    muted
+    loop
+    playsinline
+    preload="metadata">
 
-      <div class="label">
-        About Loi Per Services LLC
-      </div>
+    <source src="trucking-video.mp4" type="video/mp4">
 
-      <h2>
-        Freight You Can Count On
-      </h2>
+  </video>
 
-      <p class="muted">
-        Loi Per Services LLC provides professional
-        trucking and freight transportation services
-        for businesses that need their goods moved
-        safely, efficiently and on time.
-      </p>
+</div>
 
-      <ul class="checks">
+<div class="about-text">
 
-        <li>Reliable freight transportation</li>
+  <div class="label">
+    About Loi Per Services LLC
+  </div>
 
-        <li>Professional customer service</li>
+  <h2>
+    Your Trucking Operation. Our Dispatch Support.
+  </h2>
 
-        <li>Safety-focused operations</li>
+  <p class="muted">
+    Loi Per Services LLC provides professional
+    truck dispatch support designed to help carriers
+    manage the day-to-day demands of their operation.
+  </p>
 
-        <li>Timely and dependable deliveries</li>
+  <p class="muted">
+    We work to help keep your business organized,
+    your communication clear and your time focused
+    where it matters most.
+  </p>
 
-      </ul>
+  <ul class="checks">
 
-      <a class="btn btn-red" href="#contact">
-        Talk With Us
-      </a>
+    <li>Professional dispatch support</li>
 
-    </div>
+    <li>Carrier-focused service</li>
+
+    <li>Clear and consistent communication</li>
+
+    <li>Support built around your operation</li>
+
+  </ul>
+
+  <a class="btn btn-red" href="#contact">
+    Work With Us
+  </a>
+
+</div>
+```
 
   </div>
 
 </section>
-
 
 <!-- =========================
      SERVICES
@@ -833,163 +881,173 @@ footer{
 
   <div class="wrap">
 
-    <div class="services-header">
+```
+<div class="services-header">
 
-      <div class="label">
-        What We Do
-      </div>
+  <div class="label">
+    What We Do
+  </div>
 
-      <h2>
-        Transportation Services
-      </h2>
+  <h2>
+    Dispatch Services
+  </h2>
 
-      <p class="muted">
-        Flexible freight solutions designed to help
-        businesses keep their supply chains moving.
-      </p>
+  <p class="muted">
+    Practical dispatch support designed to help
+    trucking carriers spend less time dealing with
+    administrative tasks and more time running their
+    business.
+  </p>
 
+</div>
+
+
+<div class="cards">
+
+  <div class="card">
+
+    <div class="icon">
+      🚛
     </div>
 
+    <h3>
+      Dispatch Support
+    </h3>
 
-    <div class="cards">
+    <p class="muted">
+      Professional dispatch assistance to help
+      coordinate the day-to-day needs of your
+      trucking operation.
+    </p>
 
-      <div class="card">
-
-        <div class="icon">
-          🚛
-        </div>
-
-        <h3>
-          Freight Transportation
-        </h3>
-
-        <p class="muted">
-          Dependable trucking solutions for commercial
-          freight and business shipments.
-        </p>
-
-      </div>
+  </div>
 
 
-      <div class="card">
+  <div class="card">
 
-        <div class="icon">
-          📦
-        </div>
-
-        <h3>
-          Freight Delivery
-        </h3>
-
-        <p class="muted">
-          Professional handling and transportation
-          focused on safe and timely delivery.
-        </p>
-
-      </div>
-
-
-      <div class="card">
-
-        <div class="icon">
-          🛣️
-        </div>
-
-        <h3>
-          Long-Haul Solutions
-        </h3>
-
-        <p class="muted">
-          Transportation support for freight moving
-          across Canadian routes and beyond.
-        </p>
-
-      </div>
-
+    <div class="icon">
+      📋
     </div>
+
+    <h3>
+      Load Coordination
+    </h3>
+
+    <p class="muted">
+      Support with finding and coordinating
+      suitable opportunities based on your
+      operation and preferences.
+    </p>
+
+  </div>
+
+
+  <div class="card">
+
+    <div class="icon">
+      📞
+    </div>
+
+    <h3>
+      Carrier Communication
+    </h3>
+
+    <p class="muted">
+      Clear communication and ongoing support
+      to help keep your operation organized.
+    </p>
+
+  </div>
+
+</div>
+```
 
   </div>
 
 </section>
-
 
 <!-- =========================
      WHY US
 ========================= -->
 
-<section id="why">
+<section id="why" class="why">
 
   <div class="wrap why-grid">
 
-    <div class="why-intro">
+```
+<div class="why-intro">
 
-      <div class="label">
-        Why Choose Us
-      </div>
+  <div class="label">
+    Why Choose Us
+  </div>
 
-      <h2>
-        A Transportation Partner You Can Trust
-      </h2>
+  <h2>
+    Dispatch Support You Can Rely On
+  </h2>
 
-      <p class="muted">
-        Your freight represents your business.
-        We understand the importance of dependable
-        transportation, professional service and
-        clear communication.
-      </p>
+  <p class="muted">
+    Running a trucking business takes time,
+    organization and constant communication.
+    Our goal is to provide dependable dispatch
+    support so you can stay focused on your
+    operation.
+  </p>
 
-    </div>
-
-
-    <div class="why-items">
-
-      <div class="why-item">
-
-        <h3>
-          Reliable Service
-        </h3>
-
-        <p>
-          We focus on dependable transportation
-          and keeping commitments.
-        </p>
-
-      </div>
+</div>
 
 
-      <div class="why-item">
+<div class="why-items">
 
-        <h3>
-          Safety & Care
-        </h3>
+  <div class="why-item">
 
-        <p>
-          We treat every shipment with the care
-          and professionalism it deserves.
-        </p>
+    <h3>
+      Dependable Support
+    </h3>
 
-      </div>
+    <p>
+      We provide consistent dispatch assistance
+      and stay focused on the needs of your
+      trucking operation.
+    </p>
+
+  </div>
 
 
-      <div class="why-item">
+  <div class="why-item">
 
-        <h3>
-          Professional Communication
-        </h3>
+    <h3>
+      Carrier First
+    </h3>
 
-        <p>
-          Clear communication helps keep customers
-          informed throughout the transportation process.
-        </p>
+    <p>
+      Your operation is different. We work to
+      understand your goals, equipment and
+      preferences.
+    </p>
 
-      </div>
+  </div>
 
-    </div>
+
+  <div class="why-item">
+
+    <h3>
+      Professional Communication
+    </h3>
+
+    <p>
+      Clear communication helps keep your
+      operation moving and your business
+      organized.
+    </p>
+
+  </div>
+
+</div>
+```
 
   </div>
 
 </section>
-
 
 <!-- =========================
      CALL TO ACTION
@@ -997,29 +1055,47 @@ footer{
 
 <section class="cta">
 
+<video
+ class="cta-video"
+ autoplay
+ muted
+ loop
+ playsinline
+ preload="metadata">
+
+```
+<source src="trucking-video.mp4" type="video/mp4">
+```
+
+  </video>
+
+  <div class="cta-overlay"></div>
+
   <div class="wrap cta-content">
 
-    <div class="label">
-      Let's Move Your Freight
-    </div>
+```
+<div class="label">
+  Ready To Get Started?
+</div>
 
-    <h2>
-      Need Freight Moved?
-    </h2>
+<h2>
+  Let Us Handle The Dispatch.
+</h2>
 
-    <p>
-      Tell us what you need transported and
-      let's discuss your transportation requirements.
-    </p>
+<p>
+  Spend more time focused on your trucking
+  operation and less time dealing with dispatch.
+  Let's talk about how we can support your business.
+</p>
 
-    <a class="btn btn-red" href="#contact">
-      Request a Quote
-    </a>
+<a class="btn btn-red" href="#contact">
+  Contact Us
+</a>
+```
 
   </div>
 
 </section>
-
 
 <!-- =========================
      CONTACT
@@ -1029,132 +1105,145 @@ footer{
 
   <div class="wrap contact-grid">
 
+```
+<div>
+
+  <div class="label">
+    Get In Touch
+  </div>
+
+  <h2>
+    Let's Work Together
+  </h2>
+
+  <p class="muted">
+    Interested in dispatch support for your
+    trucking operation? Contact Loi Per Services
+    LLC and let's discuss your needs.
+  </p>
+
+
+  <div class="detail">
+
+    <b>Company</b>
+
+    <span>
+      Loi Per Services LLC
+    </span>
+
+  </div>
+
+
+  <div class="detail">
+
+    <b>Service</b>
+
+    <span>
+      Truck Dispatch Services
+    </span>
+
+  </div>
+
+
+  <div class="detail">
+
+    <b>Email</b>
+
+    <a href="mailto:loiperservices.ca@gmail.com">
+      loiperservices.ca@gmail.com
+    </a>
+
+  </div>
+
+</div>
+
+
+<form
+  action="mailto:loiperservices.ca@gmail.com"
+  method="post"
+  enctype="text/plain">
+
+  <div class="row">
+
     <div>
 
-      <div class="label">
-        Get In Touch
-      </div>
+      <label for="name">
+        Name
+      </label>
 
-      <h2>
-        Let's Move Your Freight
-      </h2>
-
-      <p class="muted">
-        Contact Loi Per Services LLC to discuss
-        your freight transportation needs.
-      </p>
-
-
-      <div class="detail">
-
-        <b>Company</b>
-
-        <span>
-          Loi Per Services LLC
-        </span>
-
-      </div>
-
-
-      <div class="detail">
-
-        <b>Service Area</b>
-
-        <span>
-          Canada
-        </span>
-
-      </div>
-
-
-      <div class="detail">
-
-        <b>Email</b>
-
-        <a href="mailto:loiperservices.ca@gmail.com">
-          loiperservices.ca@gmail.com
-        </a>
-
-      </div>
+      <input
+        id="name"
+        name="Name"
+        type="text"
+        required>
 
     </div>
 
 
-    <form
-      action="mailto:loiperservices.ca@gmail.com"
-      method="post"
-      enctype="text/plain">
+    <div>
 
-      <div class="row">
-
-        <div>
-
-          <label for="name">
-            Name
-          </label>
-
-          <input
-            id="name"
-            name="Name"
-            type="text"
-            required>
-
-        </div>
-
-
-        <div>
-
-          <label for="company">
-            Company
-          </label>
-
-          <input
-            id="company"
-            name="Company"
-            type="text">
-
-        </div>
-
-      </div>
-
-
-      <label for="email">
-        Email
+      <label for="company">
+        Company
       </label>
 
       <input
-        id="email"
-        name="Email"
-        type="email"
-        required>
+        id="company"
+        name="Company"
+        type="text">
+
+    </div>
+
+  </div>
 
 
-      <label for="message">
-        Tell us about your freight
-      </label>
+  <label for="email">
+    Email
+  </label>
 
-      <textarea
-        id="message"
-        name="Message"
-        required></textarea>
+  <input
+    id="email"
+    name="Email"
+    type="email"
+    required>
 
 
-      <button
-        class="btn btn-red"
-        type="submit">
+  <label for="phone">
+    Phone
+  </label>
 
-        Send Request
+  <input
+    id="phone"
+    name="Phone"
+    type="tel">
 
-      </button>
 
-    </form>
+  <label for="message">
+    Tell us about your operation
+  </label>
+
+  <textarea
+    id="message"
+    name="Message"
+    placeholder="Tell us about your truck, equipment, lanes, or dispatch needs..."
+    required></textarea>
+
+
+  <button
+    class="btn btn-red"
+    type="submit">
+
+    Get Started
+
+  </button>
+
+</form>
+```
 
   </div>
 
 </section>
 
 </main>
-
 
 <!-- =========================
      FOOTER
@@ -1164,14 +1253,16 @@ footer{
 
   <div class="wrap footer">
 
-    <strong>
-      LOI PER SERVICES LLC
-    </strong>
+```
+<strong>
+  LOI PER SERVICES LLC
+</strong>
 
-    <span>
-      © 2026 Loi Per Services LLC.
-      All rights reserved.
-    </span>
+<span>
+  © 2026 Loi Per Services LLC.
+  All rights reserved.
+</span>
+```
 
   </div>
 
