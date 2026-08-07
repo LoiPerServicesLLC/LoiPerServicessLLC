@@ -5,11 +5,11 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Trucking Services Video | Loi Per Services LLC</title>
+  <title>Loi Per Services LLC | Trucking Services</title>
 
   <meta
     name="description"
-    content="Watch the Loi Per Services LLC trucking services video and learn more about our professional transportation and trucking services."
+    content="Loi Per Services LLC provides reliable business-to-business trucking and freight transportation services."
   >
 
   <meta name="robots" content="index, follow">
@@ -19,45 +19,11 @@
     href="https://loiperservicesllc.github.io/LoiPerServicessLLC/trucking-video.html"
   >
 
-  <!-- Open Graph -->
-  <meta property="og:type" content="video.other">
-  <meta
-    property="og:title"
-    content="Loi Per Services LLC | Trucking Services"
-  >
-  <meta
-    property="og:description"
-    content="Watch the Loi Per Services LLC trucking services video."
-  >
-  <meta
-    property="og:url"
-    content="https://loiperservicesllc.github.io/LoiPerServicessLLC/trucking-video.html"
-  >
-
-  <!-- Video structured data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "VideoObject",
-    "name": "Loi Per Services LLC Trucking Services",
-    "description": "A video showcasing Loi Per Services LLC and its professional trucking and transportation services.",
-    "thumbnailUrl": [
-      "https://loiperservicesllc.github.io/LoiPerServicessLLC/trucking-video-poster.jpg"
-    ],
-    "uploadDate": "2026-08-08",
-    "contentUrl": "https://loiperservicesllc.github.io/LoiPerServicessLLC/trucking-video.mp4",
-    "embedUrl": "https://loiperservicesllc.github.io/LoiPerServicessLLC/trucking-video.html",
-    "publisher": {
-      "@type": "Organization",
-      "name": "Loi Per Services LLC",
-      "url": "https://loiperservicesllc.github.io/LoiPerServicessLLC/"
-    }
-  }
-  </script>
-
   <style>
     * {
       box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
     html {
@@ -65,188 +31,333 @@
     }
 
     body {
-      margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      background: #0b0f14;
+      background: #080c11;
       color: #ffffff;
       line-height: 1.6;
     }
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .header {
+    /* HEADER */
+    header {
       background: #111820;
-      border-bottom: 1px solid rgba(255,255,255,0.12);
-      padding: 18px 6%;
-      position: sticky;
-      top: 0;
-      z-index: 10;
+      border-bottom: 1px solid #29323c;
+      padding: 22px 5%;
     }
 
-    .nav {
+    .header-inner {
       max-width: 1200px;
-      margin: auto;
+      margin: 0 auto;
+
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 20px;
     }
 
-    .brand {
-      font-size: 1.25rem;
+    .logo-text {
+      font-size: 25px;
       font-weight: 800;
       letter-spacing: 0.5px;
     }
 
-    .brand span {
-      color: #f4b400;
+    .logo-text span {
+      color: #f5b400;
     }
 
-    .back-link {
-      border: 1px solid rgba(255,255,255,0.25);
-      padding: 9px 16px;
+    .back-button {
+      display: inline-block;
+      padding: 12px 20px;
+
+      color: #ffffff;
+      text-decoration: none;
+
+      border: 1px solid #59636d;
       border-radius: 6px;
-      font-size: 0.9rem;
-      transition: 0.2s ease;
+
+      font-weight: 600;
+
+      transition: 0.25s ease;
     }
 
-    .back-link:hover {
-      background: #f4b400;
-      color: #111;
-      border-color: #f4b400;
+    .back-button:hover {
+      background: #f5b400;
+      color: #080c11;
+      border-color: #f5b400;
     }
 
+    /* HERO */
     .hero {
-      padding: 70px 20px 35px;
+      position: relative;
+      min-height: 440px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
       text-align: center;
+
+      padding: 80px 20px;
+
+      overflow: hidden;
+
       background:
         linear-gradient(
-          rgba(7, 11, 16, 0.85),
-          rgba(7, 11, 16, 0.95)
-        );
+          rgba(0, 0, 0, 0.72),
+          rgba(0, 0, 0, 0.82)
+        ),
+        #05080c;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+
+      max-width: 1000px;
+      margin: 0 auto;
     }
 
     .hero h1 {
-      margin: 0 auto 15px;
-      max-width: 900px;
-      font-size: clamp(2rem, 5vw, 4rem);
-      line-height: 1.1;
-      font-weight: 800;
+      font-size: clamp(42px, 7vw, 78px);
+      line-height: 1.05;
+      font-weight: 900;
+      letter-spacing: -2px;
+
+      margin-bottom: 10px;
     }
 
     .hero h1 span {
-      color: #f4b400;
+      display: block;
+      color: #f5b400;
     }
 
     .hero p {
-      max-width: 720px;
-      margin: 0 auto;
-      color: #cbd3dc;
-      font-size: 1.1rem;
+      max-width: 760px;
+      margin: 25px auto 0;
+
+      color: #e1e5e9;
+      font-size: clamp(17px, 2vw, 21px);
     }
 
+    /* VIDEO SECTION */
     .video-section {
-      width: min(1100px, 92%);
-      margin: 35px auto 70px;
+      padding: 70px 20px 90px;
+
+      background: #0b1016;
     }
 
-    .video-wrapper {
-      background: #000;
-      border-radius: 12px;
+    .video-container {
+      width: 100%;
+      max-width: 1100px;
+
+      margin: 0 auto;
+
+      background: #000000;
+
+      border: 1px solid #303942;
+      border-radius: 14px;
+
       overflow: hidden;
-      box-shadow: 0 25px 70px rgba(0,0,0,0.5);
-      border: 1px solid rgba(255,255,255,0.12);
+
+      box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.55);
     }
 
     video {
       display: block;
+
       width: 100%;
       height: auto;
-      background: #000;
+
+      min-height: 300px;
+
+      background: #000000;
+
+      object-fit: contain;
     }
 
-    .video-caption {
-      padding: 18px 22px;
+    .video-message {
+      padding: 18px 20px;
+
+      text-align: center;
+
       background: #111820;
-      color: #cbd3dc;
-      font-size: 0.95rem;
+
+      color: #cbd2d8;
+
+      font-size: 14px;
     }
 
-    .content {
-      width: min(1000px, 90%);
-      margin: 0 auto 80px;
+    /* INFORMATION */
+    .info-section {
+      max-width: 1100px;
+
+      margin: 0 auto;
+
+      padding: 0 20px 90px;
     }
 
-    .content h2 {
-      font-size: 2rem;
+    .info-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 24px;
+    }
+
+    .info-card {
+      background: #111820;
+
+      border: 1px solid #29323c;
+      border-radius: 10px;
+
+      padding: 30px 25px;
+
+      text-align: center;
+    }
+
+    .info-card .icon {
+      font-size: 34px;
+
       margin-bottom: 15px;
     }
 
-    .content p {
-      color: #cbd3dc;
-      font-size: 1.05rem;
+    .info-card h2 {
+      color: #f5b400;
+
+      font-size: 21px;
+
+      margin-bottom: 10px;
     }
 
+    .info-card p {
+      color: #cbd2d8;
+
+      font-size: 15px;
+    }
+
+    /* CALL TO ACTION */
     .cta {
-      margin-top: 35px;
-      padding: 35px;
-      border-radius: 12px;
-      background: #151d26;
-      border: 1px solid rgba(255,255,255,0.1);
+      background:
+        linear-gradient(
+          135deg,
+          #121a22,
+          #090d12
+        );
+
+      border-top: 1px solid #29323c;
+      border-bottom: 1px solid #29323c;
+
       text-align: center;
+
+      padding: 70px 20px;
     }
 
     .cta h2 {
-      margin-top: 0;
+      font-size: clamp(30px, 5vw, 48px);
+
+      margin-bottom: 15px;
     }
 
-    .button {
+    .cta p {
+      color: #cbd2d8;
+
+      max-width: 650px;
+
+      margin: 0 auto 28px;
+    }
+
+    .cta-button {
       display: inline-block;
-      margin-top: 12px;
-      padding: 13px 24px;
-      border-radius: 6px;
-      background: #f4b400;
-      color: #111;
+
+      background: #f5b400;
+      color: #080c11;
+
+      text-decoration: none;
+
       font-weight: 800;
-      transition: 0.2s ease;
+
+      padding: 14px 28px;
+
+      border-radius: 6px;
+
+      transition: 0.25s ease;
     }
 
-    .button:hover {
-      background: #ffc928;
-      transform: translateY(-1px);
+    .cta-button:hover {
+      background: #ffffff;
+
+      transform: translateY(-2px);
     }
 
+    /* FOOTER */
     footer {
-      border-top: 1px solid rgba(255,255,255,0.1);
-      padding: 25px 20px;
       text-align: center;
-      color: #8f9aa6;
-      font-size: 0.9rem;
-      background: #080c11;
+
+      padding: 30px 20px;
+
+      background: #070a0e;
+
+      color: #8f99a3;
+
+      font-size: 14px;
     }
 
-    @media (max-width: 600px) {
-      .header {
-        padding: 15px 20px;
+    footer strong {
+      color: #f5b400;
+    }
+
+    /* MOBILE */
+    @media (max-width: 800px) {
+
+      .header-inner {
+        flex-direction: column;
       }
 
-      .brand {
-        font-size: 1rem;
-      }
-
-      .back-link {
-        padding: 8px 12px;
+      .logo-text {
+        text-align: center;
       }
 
       .hero {
-        padding-top: 45px;
+        min-height: 380px;
+
+        padding: 60px 20px;
       }
 
-      .cta {
-        padding: 25px 18px;
+      .info-grid {
+        grid-template-columns: 1fr;
+      }
+
+      video {
+        min-height: 220px;
+      }
+    }
+
+    @media (max-width: 500px) {
+
+      header {
+        padding: 18px 15px;
+      }
+
+      .logo-text {
+        font-size: 21px;
+      }
+
+      .hero h1 {
+        letter-spacing: -1px;
+      }
+
+      .video-section {
+        padding: 40px 12px 60px;
+      }
+
+      .video-container {
+        border-radius: 8px;
+      }
+
+      .info-section {
+        padding-left: 12px;
+        padding-right: 12px;
       }
     }
   </style>
@@ -254,112 +365,156 @@
 
 <body>
 
-  <header class="header">
-    <nav class="nav">
-      <a
-        class="brand"
-        href="https://loiperservicesllc.github.io/LoiPerServicessLLC/"
-      >
+  <!-- HEADER -->
+  <header>
+    <div class="header-inner">
+
+      <div class="logo-text">
         Loi Per <span>Services LLC</span>
-      </a>
+      </div>
 
       <a
-        class="back-link"
+        class="back-button"
         href="https://loiperservicesllc.github.io/LoiPerServicessLLC/"
       >
         ← Back to Website
       </a>
-    </nav>
+
+    </div>
   </header>
 
-  <main>
 
-    <section class="hero">
+  <!-- HERO -->
+  <section class="hero">
+
+    <div class="hero-content">
+
       <h1>
         Loi Per Services LLC
         <span>Trucking Services</span>
       </h1>
 
       <p>
-        Watch our trucking services video and learn more about
-        Loi Per Services LLC.
+        Reliable business-to-business trucking and freight
+        transportation services built around safe, timely,
+        and professional delivery.
       </p>
-    </section>
 
-    <section class="video-section">
+    </div>
 
-      <div class="video-wrapper">
+  </section>
 
-        <video
-          controls
-          playsinline
-          preload="metadata"
-          width="1920"
-          height="1080"
-          poster="trucking-video-poster.jpg"
+
+  <!-- VIDEO -->
+  <section class="video-section">
+
+    <div class="video-container">
+
+      <video
+        controls
+        preload="metadata"
+        playsinline
+        poster=""
+      >
+
+        <source
+          src="trucking-video.mp4"
+          type="video/mp4"
         >
-          <source
-            src="https://loiperservicesllc.github.io/LoiPerServicessLLC/trucking-video.mp4"
-            type="video/mp4"
-          >
 
-          Your browser does not support HTML5 video.
+        Your browser does not support HTML5 video.
 
-          <a
-            href="https://loiperservicesllc.github.io/LoiPerServicessLLC/trucking-video.mp4"
-          >
-            Watch the trucking services video
-          </a>
-        </video>
+      </video>
 
-        <div class="video-caption">
-          <strong>Loi Per Services LLC — Trucking Services</strong><br>
-          Professional trucking and transportation services.
-        </div>
-
+      <div class="video-message">
+        Watch our trucking services video to learn more about
+        Loi Per Services LLC.
       </div>
 
-    </section>
+    </div>
 
-    <section class="content">
+  </section>
 
-      <h2>About Our Trucking Services</h2>
 
-      <p>
-        Loi Per Services LLC provides professional trucking and
-        transportation services. Our goal is to provide dependable,
-        professional service for our customers.
-      </p>
+  <!-- SERVICES -->
+  <section class="info-section">
 
-      <p>
-        Watch the video above to learn more about Loi Per Services LLC
-        and our trucking services.
-      </p>
+    <div class="info-grid">
 
-      <div class="cta">
+      <div class="info-card">
 
-        <h2>Ready to Learn More?</h2>
+        <div class="icon">🚛</div>
+
+        <h2>Reliable Transportation</h2>
 
         <p>
-          Visit our main website to learn more about Loi Per Services LLC.
+          Dependable trucking and freight transportation
+          services for business customers.
         </p>
-
-        <a
-          class="button"
-          href="https://loiperservicesllc.github.io/LoiPerServicessLLC/"
-        >
-          Visit Loi Per Services LLC
-        </a>
 
       </div>
 
-    </section>
 
-  </main>
+      <div class="info-card">
 
+        <div class="icon">⏱️</div>
+
+        <h2>Timely Delivery</h2>
+
+        <p>
+          We understand the importance of getting your
+          freight where it needs to go on time.
+        </p>
+
+      </div>
+
+
+      <div class="info-card">
+
+        <div class="icon">🤝</div>
+
+        <h2>Professional Service</h2>
+
+        <p>
+          We are committed to safe, professional service
+          and strong customer relationships.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CTA -->
+  <section class="cta">
+
+    <h2>Need Reliable Trucking Services?</h2>
+
+    <p>
+      Contact Loi Per Services LLC to discuss your
+      transportation and freight needs.
+    </p>
+
+    <a
+      class="cta-button"
+      href="mailto:loiperservices.ca@gmail.com"
+    >
+      Contact Loi Per Services LLC
+    </a>
+
+  </section>
+
+
+  <!-- FOOTER -->
   <footer>
-    © 2026 Loi Per Services LLC. All rights reserved.
+
+    © 2026 <strong>Loi Per Services LLC</strong>.
+    All rights reserved.
+
   </footer>
+
 
 </body>
 </html>
